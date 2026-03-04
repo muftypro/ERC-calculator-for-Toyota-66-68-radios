@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- 2024 (c) Ivan -->
+<html  lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ERC Calc</title>
+    <meta name="author" content="Ivan">
+        
+    <link href="./css/style.css" rel="stylesheet">    
+      
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <h1 class="heder_module">ERC Calc</h1>
+      </header>
+
+      <main class="app-main">
+        <form id="cuw_bin" action="#" method="post" onsubmit="return false">
+          <section class="panel">
+            <h2 class="panel-title">Radio version</h2>
+
+            <label class="field">
+              <span class="field-label">Model</span>
+              <select id="Tab" class="select-field">
+                <option value="1">W68T</option>
+                <option value="2">Y68T</option>
+                <option value="3">Z68T</option>
+                <option value="8">X68T</option>
+                <option value="9">W68</option>
+                <option value="10">Y68</option>
+                <option value="11">Z68</option>
+                <option value="4">OLD 64–66 (legacy)</option>
+                <option value="5">Custom HV W68T</option>
+                <option value="6">Custom HV Y68T</option>
+                <option value="7">Custom HV Z68T</option>
+              </select>
+            </label>
+          </section>
+
+          <section class="panel">
+            <h2 class="panel-title">ERC data</h2>
+
+            <label class="field">
+              <span class="field-label">8‑byte ERC (16 hex)</span>
+              <input
+                tabindex="1"
+                class="input_metod"
+                type="text"
+                id="in_data"
+                maxlength="16"
+                placeholder="e.g. F1FFDFEF1234ABCD"
+                autocomplete="off"
+                inputmode="latin"
+              >
+            </label>
+
+            <div class="result-row">
+              <span class="field-label">Result</span>
+              <span class="result-output" id="Result">Waiting for ERC…</span>
+            </div>
+
+            <div class="button-row">
+              <input tabindex="2" class="button_form primary" type="button" id="btn_Get" value="Calculate">
+              <input tabindex="10" class="button_form secondary" type="button" value="Clear" onClick="document.location.reload(true)">
+            </div>
+          </section>
+        </form>
+      </main>
+    </div>
+          
+    <script src="./js/erc.js" defer></script>
+
+  </body>
+</html>
